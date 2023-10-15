@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Produk</title>
+</head>
+<body>
+    <h1 align="center">Formulir Produk</h1>
+    <form action="hasil-produk.html">
+        <table border="2" align="center">
+            <td><b>Home | Generate Link | Transaction History | Policy | Logout</b> </td>
+        </table>
+        <br><br>
+        <fieldset>
+            <table border="1">
+                <td><img src="ashel.jpeg" width="205" alt=""></td>
+            </table>
+       <label for="foto"></label> <br>
+        <input type="file" required>
+        <br>
+        <br>
+
+        <label for="title here">Title Here :</label>
+        <input type="text" placeholder="Birthday T-Shirt Ashel" required> 
+        <br>
+        <br>
+
+        <label for="description">Description :</label> <br>
+        <textarea cols="30" rows="4">Bahannya adem & Halus, siapa cepat dia dapat. Tersedia berbagai ukuran S, M, L, XL, XXL, 3XL, 4XL.</textarea>
+        <br>
+        <br>
+
+        <label for="account number">Account Number :</label>
+        <input type="text" placeholder="192-876-543-0" required>
+        <br>
+        <br>
+
+        <label for="Bank">Bank</label>
+        <select name="Bank" id="Bank">
+            <option value="BCA">BCA</option>
+            <option value="BNI">BNI</option>
+            <option value="MANDIRI">MANDIRI</option>
+            <option value="BRI">BRI</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="acount holder">Acount Holder:</label>
+        <input type="text" placeholder="Kholl">
+        <br>
+        <br>
+
+        <label for="transaction">Transaction</label>
+        <input type="number" required> <br>
+        <p>* if the transaction is for 3 person, choose 3 from the drop-down list</p>
+      
+      <input type="checkbox" id="Send to Mobile Phone" name="Transaction" value="Send to Mobile Phone" /> Send to Mobile Phone
+      <input type="checkbox" id="Send to Email" name="Transaction" value="Send to Email" /> Send to Email
+        <br>
+        <br>
+
+        <button type="submit" style="background-color: chartreuse;">Generate Nabr Link</button>
+        </fieldset>
+    </form>
+</body>
+</html>
