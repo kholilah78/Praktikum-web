@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <style>
+        .foto {
+            margin: 10px 0 40px 0;
+            float: left;
+            width: 25%;
+        }
+
+        img {
+            border: groove black;
+        }
+
+        .Profile-Name {
+            margin: 10px 0 40px 0;
+            width: 40%;
+            font-size: 20px;
+            float: left;
+        }
+
+       .Hobi {
+            margin: 10px 0 40px 0;
+            width: 25%;
+            font-size: 20px;
+            float: right;
+       }
+
+        article {
+            margin: 10px 0 10px 0;
+            clear: both;
+        }
+
+        * {
+             box-sizing: border-box;
+          }
+    
+         .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 200px; 
+          }
+    
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Directory Profile Page</legend>
+        <div class="foto">
+            <img src="foto.jpeg" alt="" width="250px">
+        </div>
+        <div class="Profile-Name">
+            <h1>Profile Name</h1>
+            <p>Nama : Kholilah Nurafifah</p>
+            <p>Prodi : Teknik Informatika</p>
+            <p>Alamat : Jln Gang H. Sanen Kel. Tugu </p>
+            <p>Email : <a href="mailto:kholilahnurafifah0708@gmail.com">kholilahnurafifah0708@gmail.com</a></p>
+            <p>Telephone : 0858-8308-0421</p>
+        </div>
+       <div class="Hobi">
+        <h1>Hobi</h1>
+            <ul>
+                <li>sepedahan</li>
+                <li>tidur</li>
+            </ul>
+       </div>
+        <article>
+            <h1>Deskripsi diri</h1>
+            <p>Saya Kholilah Nurafifah, bisa di panggil Kholilah dari Prodi Teknik  Informatika dari kelas TI06. Saya merupakan lulusan
+                dari SMK Harapan Bangsa Jurusan Teknik Komputer dan Jaringan. Dan melanjutkan ke jenjang yang lebih tinggi di STT terpadu Nurul Fikri.
+            </p>
+            <p>Saya tinggal di Jln. Gang H. Sanen. Saya anak ke 3 dari 3 bersaudara. Saya memiliki salah satu hobi yaitu sepedahan.</p>
+        </article>
+        <footer>
+            <div class="row">
+                <div class="column" style="background-color:white;">
+                  <video width="320" height="200" controls>
+                  <source src="jj1.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column"  style="background-color:white;" >
+                  <table border="3">
+                  <tr >
+                      <td><img src="foto1.jpeg" width="150" alt=""></td>
+                      <td><img src="foto 2.jpeg" width="150" alt=""></td>
+                  </tr>
+                  <tr>
+                      <td><img src="foto 3.jpeg" width="150"></td>
+                      <td><img src="foto 4.jpeg" width="150"></td>
+                  </tr>
+                  </table>
+                </div>
+                <fieldset>
+                    <legend>Attachment</legend>
+                    <div class="column" style="background-color:white;">
+                        <p><a href="https://drive.google.com/file/d/10fi_bPu_AfRvRmSJGudVgan1QSVMKfm3/view?usp=sharing">Pertemuan ke 1</a></p>
+                        <p><a href="https://drive.google.com/file/d/155fKB9ifa0DSoA4YfGRovmM9TERN05SV/view?usp=sharing">Pertemuan ke 2</a></p>
+                        <p><a href="https://drive.google.com/file/d/1YffBunoDOHVgDE6MOXn0DXGyDHzqj9mY/view?usp=sharing">Pertemuan ke 3</a></p>
+                        <p><a href="https://drive.google.com/file/d/1lJ0Ni6sjIRfTIEjgt9NYproUMkQamYKa/view?usp=sharing">Pertemuan ke 4</a></p>
+                    </div>
+                </fieldset>
+              </div>
+        </footer>
+    </fieldset>
+</body>
+</html>
