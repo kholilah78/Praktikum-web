@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form pegawai</title>
+</head>
+<body>
+    <h2>FORM ENTRY DATA PEGAWAI</h2>
+    <form action="uts.html">
+        <label for="nik">NIK :</label>
+        <input type="text" id="nik" name="nik" required>
+        <br><br>
+
+        <label for="nama">Nama :</label>
+        <input type="text" id="nama" name="nama" required>
+        <br><br>
+
+        <label for="tempat_lahir">Tempat Lahir :</label>
+        <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+        <br><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir :</label>
+        <input type="date" name="tanggal_lahir" id="tanggal_lahir" required>
+        <br><br>
+
+        <label for="alamat">Alamat :</label>
+        <textarea name="alamat" id="alamat" rows="4"></textarea>
+        <br><br>
+
+        <label for="no_telepon">No Telepon :</label>
+        <input type="number" id="no_telepon" name="no_telepon" required>
+        <br><br>
+
+        <label for="jabatan">Jabatan :</label>
+        <select name="jabatan" id="jabatan">
+            <option value="manager">Manager</option>
+            <option value="staff">Staff</option>
+            <option value="supervisor">Supervisor</option>
+        </select>
+        <br><br>
+
+        <label for="status">Status</label>
+        <select name="status" id="status">
+            <option value="aktif">Aktif</option>
+            <option value="tidak_aktif">Tidak Aktif</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Simpan">
+        <input type="reset" value="Batal">
+    </form>
+</body>
+</html>
