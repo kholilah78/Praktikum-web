@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .container {
+            display:flex ;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        aside {
+            background-color: blue;
+            flex: 1;
+            padding: 10px;
+        }
+
+        article {
+            background-color: red;
+            flex: 3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        img {
+            padding: 20px;
+            max-width: 25%;
+            border: 1px solid black;
+        }
+
+        footer {
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>tampilan header</header>
+    <main>
+        <aside>tampilan aside</aside>
+        <article>
+            <img src="dino ijo.jpg" alt="">
+            <img src="dino pink.jpg" alt="">
+            <img src="dino rupa2.jpg" alt="">
+        </article>
+    </main>
+    <footer>footer</footer>
+    </div>
+</body>
+</html>
