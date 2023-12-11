@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Biaya Parkir</title>
+</head>
+<body>
+    <h1>Menghitung Biaya Parkir</h1>
+
+    <label for="masuk">Jam Masuk Kendaraan :</label>
+    <input type="number" id="masuk" name="masuk">
+    
+    <br>
+    <br>
+
+    <label for="keluar">Jam Keluar Kendaraan :</label>
+    <input type="number" id="keluar" name="keluar">
+    <br><br>
+
+    <button onclick="hitungParkir()">Hitung Biaya Parkir</button>
+
+    <p>Biaya Parkir : <span id="biaya"></span></p>
+
+    <script>
+        function hitungParkir() {
+            let jammasuk = document.getElementById("masuk").value;
+            let jamkeluar = document.getElementById("keluar").value;  
+            
+            let biayaAwal = 3000;
+            let biayaTambahn = 1000;
+
+            let lamaJam = jamkeluar - jammasuk;
+
+            let biayaTotal = biayaAwal;
+
+            if (lamaJam > 2) {
+                biayaTotal = biayaTotal + (lamaJam - 2) * biayaTambahn;
+            }
+
+            document.getElementById("biaya").innerText = biayaTotal;
+        }
+    </script>
+</body>
+</html>
