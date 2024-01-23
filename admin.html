@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | Bengkel Bersama</title>
+    <style>
+      .content-wrapper {
+        padding-top: 3rem;
+      }
+    </style>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      chref="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./plugins/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./dist/css/adminlte.min.css" />
+
+    <!-- icon -->
+    <link rel="icon" href="assets/images/logo1.png" />
+  </head>
+  <body class="hold-transition sidebar-mini sidebar-collapse layout-fixed">
+    <div class="wrapper">
+      <!-- navbar -->
+      <nav
+        class="main-header navbar navbar-expand navbar-dark navbar-light fixed-top"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+              <i class="fas fa-bars"></i>
+            </a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="admin.html" class="nav-link">Admin Bengkel Bersama</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- main sidebar container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="admin.html" class="brand-link">
+          <img
+            src="assets/images/logoAdmin.png"
+            alt="logo Bengkel"
+            class="brand-image img-circle elevation-1"
+            style="opacity: 0.9"
+          />
+          <span class="brand-text font-weight-light">Admin</span>
+        </a>
+
+        <div class="sidebar">
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="assets/images/user.png"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="admin.html" class="d-block" style="color: white"
+                >Kelompok 5</a
+              >
+            </div>
+          </div>
+
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <ion-icon name="cart-outline" class="nav-icon"></ion-icon>
+                  <p>
+                    Transaksi
+                    <i class="right fas fa-angle-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="transaksi.html" class="nav-link">
+                      <ion-icon name="storefront-outline"></ion-icon>
+                      <p>Produk</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="daftar_montir.html" class="nav-link">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <p>Montir/Mekanik</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <ion-icon name="log-out-outline" class="nav-icon"></ion-icon>
+                  <p>
+                    <button id="logout" class="btn btn-danger">Log Out</button>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Admin</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="home2.html">Home</a></li>
+                  <li class="breadcrumb-item active">Admin</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card card-primary card-outline">
+                  <div class="card-body box-profile">
+                    <div class="text-center">
+                      <img
+                        class="profile-user-img img-fluid img-circle"
+                        src="assets/images/user.png"
+                        alt="User profile picture"
+                      />
+                    </div>
+                    <h3 class="profile-username text-center">Kelompok 5</h3>
+                    <p class="text-muted text-center">Senior Mekanik</p>
+                  </div>
+                </div>
+
+                <div class="card card-primary">
+                  <!-- about me -->
+                  <div class="card-header">
+                    <h3 class="card-title">About Me</h3>
+                  </div>
+
+                  <div class="card-body">
+                    <!-- education -->
+                    <strong><i class="fas fa-book mr-1"></i> Education</strong>
+                    <p class="text-muted">
+                      Diploma-IV Teknik Otomotif di Universitas A
+                    </p>
+                    <hr />
+
+                    <!-- location -->
+                    <strong
+                      ><i class="fas fa-map-marker-alt mr-1"></i
+                      >Location</strong
+                    >
+                    <p class="text-muted">Indonesia</p>
+                    <hr />
+
+                    <!-- skills -->
+                    <strong
+                      ><i class="fas fa-pencil-alt mr-1"></i> Skills</strong
+                    >
+                    <p class="text-muted">
+                      <span class="tag tag-danger">Teknik Otomotif |</span>
+                      <span class="tag tag-success">Desainer Otomotif |</span>
+                      <span class="tag tag-info">Service Advisor |</span>
+                      <span class="tag tag-warning"
+                        >Teknologi Rekayasa Otomotif</span
+                      >
+                    </p>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+
+              <!-- aktivitas -->
+              <div class="col-md-9">
+                <div class="card">
+                  <div class="card-header p-2">
+                    <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          href="#activity"
+                          data-toggle="tab"
+                          >Activitas</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content">
+                      <div class="active tab-pane" id="activity">
+                        <div class="post">
+                          <span class="hari">
+                            <h4 style="color: deepskyblue">
+                              SENIN, 15 September 2025
+                            </h4>
+                          </span>
+                          <p>
+                            <b>Service Besar</b>
+                          </p>
+
+                          <img
+                            src="assets/images/bengkel4.jpg"
+                            alt="service-besar"
+                            width="300"
+                          />
+
+                          <img
+                            src="assets/images/bengkel2.jpg"
+                            alt="service-besar"
+                            width="300"
+                          />
+                        </div>
+                        <div class="post clearfix">
+                          <div class="user-block">
+                            <span class="hari">
+                              <h4 style="color: deepskyblue">
+                                KAMIS, 18 September 2025
+                              </h4>
+                            </span>
+                          </div>
+                          <p>
+                            <b>Service Ringan</b>
+                          </p>
+                          <img
+                            src="assets/images/bengkel5.jpg"
+                            alt="service-ringan"
+                            width="300"
+                          />
+                          <img
+                            src="assets/images/bengkel1.jpg"
+                            alt="service-ringan"
+                            width="300"
+                          />
+                        </div>
+                        <div class="post">
+                          <div class="hari">
+                            <span class="username">
+                              <h4 style="color: deepskyblue">
+                                MINGGU, 21 September 2025
+                              </h4>
+                            </span>
+                          </div>
+                          <p>
+                            <b>Body Repair</b>
+                          </p>
+                          <img
+                            src="assets/images/bengkel3.jpg"
+                            alt="body-repair"
+                            width="300"
+                          />
+                          <img
+                            src="assets/images/bengkel6.jpg"
+                            alt="body-repair"
+                            width="300"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- footer -->
+      <footer class="main-footer">
+        <strong>&copy; Develop by Kelompok 5 STT NF @2024. </strong>
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark"></aside>
+    </div>
+
+    <!--icon-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <!-- log out -->
+    <script>
+      document.getElementById("logout").addEventListener("click", function () {
+        swal
+          .fire({
+            title: "Anda Yakin Ingin Keluar?",
+            text: "",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya. Keluar!",
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "home.html";
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

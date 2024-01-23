@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Booking | Bengkel Bersama</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="./plugins/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./dist/css/adminlte.min.css" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!--icon-->
+    <link rel="icon" href="assets/images/logo1.png" />
+  </head>
+  <body class="hold-transition layout-top-nav">
+    <div class="wrapper">
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="container">
+            <div class="row mb-2">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active">Booking</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid col-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-info">
+                  <div class="card-header">
+                    <h3 class="card-title">Booking Service</h3>
+                  </div>
+
+                  <!-- form -->
+                  <form class="form-horizontal" id="myForm">
+                    <div class="card-body">
+                      <!-- jenis kendaraan -->
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="form-group row">
+                            <label for="jenis" class="col-sm-3 col-form-label"
+                              >Jenis Kendaraan</label
+                            >
+                            <div class="col-sm-2">
+                              <select
+                                class="form-control"
+                                name="kendaraan"
+                                id="kendaraan"
+                                required
+                              >
+                                <option></option>
+                                <option>Truk</option>
+                                <option>Mobil</option>
+                                <option>Minibus</option>
+                                <option>Pick up</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--nama pemesan-->
+                      <div class="form-group row">
+                        <label for="nama" class="col-sm-3 col-form-label"
+                          >Nama Pemesan</label
+                        >
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="nama"
+                            id="nama"
+                            placeholder="Nama Pemesan"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Kategori Peminjam -->
+                      <div class="form-group row">
+                        <label for="kategori" class="col-sm-3"
+                          >Kategori Peminjam</label
+                        >
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="kategori"
+                                id="kategori"
+                                required
+                              />
+                              <label class="form-check-label">Pribadi</label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="kategori"
+                                id="kategori"
+                                required
+                              />
+                              <label class="form-check-label"
+                                >Perusahaan/Organisasi</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--deskripsi kebutuhan-->
+                      <div class="form-group row">
+                        <label for="kebutuhan" class="col-sm-3 col-form-label"
+                          >Deskripsi Kebutuhan</label
+                        >
+                        <div class="col-sm-9">
+                          <textarea
+                            class="form-control"
+                            rows="3"
+                            placeholder="Deskripsi Kebutuhan"
+                            name="kebutuhan"
+                            id="kebutuhan"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <!--jam, tanggal service-->
+                      <div class="form-group row">
+                        <label for="jamTanggal" class="col-sm-3 col-form-label"
+                          >Jam, Tanggal Sevice</label
+                        >
+                        <div class="col-sm-2">
+                          <input
+                            type="datetime-local"
+                            name="jamTanggal"
+                            id="jamTanggal"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <!--request montir-->
+                      <div class="form-group row">
+                        <label for="request" class="col-sm-3 col-form-label"
+                          >Request Montir</label
+                        >
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            name="request"
+                            id="request"
+                            placeholder="Request Montir"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <!--Telpon/HP-->
+                      <div class="form-group row">
+                        <label for="telpon" class="col-sm-3 col-form-label"
+                          >Telpon/HP</label
+                        >
+                        <div class="col-sm-9">
+                          <input
+                            type="number"
+                            name="telponHp"
+                            id="telponHp"
+                            placeholder="+628123456789"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <!--email-->
+                      <div class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label"
+                          >Email</label
+                        >
+                        <div class="col-sm-9">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="emailKamu@gmail.com"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- card footer -->
+                    <div class="card-footer">
+                      <input
+                        type="submit"
+                        value="Submit"
+                        class="btn btn-info"
+                        id="btn"
+                        value="Login"
+                      />
+                      <input
+                        type="reset"
+                        value="Cancel"
+                        class="btn btn-danger"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <strong>&copy; Develop by Kelompok 5 STT NF @2023. </strong>
+      </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <script src="dist/sweetalert2.all.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Validasi formulir sebelum menampilkan pop-up
+          let kendaraan = document.getElementById("kendaraan").value;
+          let nama = document.getElementById("nama").value;
+          let kategori = document.querySelector("kategori");
+          let kebutuhan = document.getElementById("kebutuhan").value;
+          let jamTanggal = document.getElementById("jamTanggal").value;
+          let request = document.getElementById("request").value;
+          let telponHp = document.getElementById("telponHp").value;
+          let email = document.getElementById("email").value;
+
+          if (
+            (kendaraan != "",
+            nama != "",
+            kategori != "",
+            kebutuhan != "",
+            jamTanggal != "",
+            request != "",
+            telponHp != "",
+            email != "")
+          ) {
+            Swal.fire({
+              title: "Sukses",
+              text: "Anda Berhasil Booking",
+              icon: "success",
+              confirmButtonText: "OK",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Reset the form
+                form.reset();
+
+                redirectToMainPage();
+              }
+            });
+          } else {
+            Swal.fire({
+              title: "Error",
+              text: "Harap isi semua formulir terlebih dahulu",
+              icon: "error",
+            });
+          }
+        });
+      });
+    </script>
+    <script>
+      function redirectToMainPage() {
+        window.location.href = "home2.html";
+      }
+    </script>
+  </body>
+</html>

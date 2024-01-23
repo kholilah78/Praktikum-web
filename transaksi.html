@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Transaksi | Bengkel Bersama</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./dist/css/adminlte.min.css">
+  <!-- icon -->
+  <link rel="icon" href="assets/images/logo1.png">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="admin.html" class="nav-link">Admin Bengkel Bersama</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="admin.html" class="brand-link">
+      <img src="assets/images/logoAdmin.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Admin</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="assets/images/user.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="admin.html" class="d-block">Kelompok 5</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul
+          class="nav nav-pills nav-sidebar flex-column"
+          data-widget="treeview"
+          role="menu"
+          data-accordion="false"
+        >
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <ion-icon name="cart-outline" class="nav-icon"></ion-icon>
+              <p>
+                Transaksi
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="transaksi.html" class="nav-link">
+                  <ion-icon name="storefront-outline"></ion-icon>
+                  <p>Produk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="daftar_montir.html" class="nav-link">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <p>Montir/Mekanik</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <ion-icon name="log-out-outline" class="nav-icon"></ion-icon>
+              <p>
+                <button id="logout" class="btn btn-danger">Log Out</button>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Daftar Transaksi</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="home2.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="admin.html">Admin</a></li>
+              <li class="breadcrumb-item active">Daftar Transaksi</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+     <!-- Main content -->
+     <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Tabel Daftar Transaksi -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Daftar Transaksi</h3>
+              </div>
+              <div class="card-body">
+                <!-- Button untuk membuka form -->
+                <button type="button" class="btn btn-primary btnTambah" onclick="bukaForm()">Tambah</button>
+                <table id="transaksiTable" class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>No Pol</th>
+                      <th>Tanggal</th>
+                      <th>Pelanggan</th>
+                      <th>Keluhan</th>
+                      <th>Kategori</th>
+                      <th>Layanan</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Data transaksi akan ditampilkan di sini -->
+                    <tr>
+                      <td>1</td>
+                      <td>ABC123</td>
+                      <td>2024-01-19</td>
+                      <td>Ciko</td>
+                      <td>Ganti Ban</td>
+                      <td>Mobil</td>
+                      <td>Service Ringan</td>
+                      <td>
+                        <button type="button" onclick="editTransaksi(this)" class="btn btn-warning">Edit</button>
+                        <button type="button" onclick="hapusTransaksi(this)" class="btn btn-danger">Hapus</button>
+                        <button type="button" onclick="detailTransaksi(this)" class="btn btn-info">Detail</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+
+        <div class="card" id="formCard" style="display: none;">
+          <div class="card-header">
+            <h3 class="card-title">Tambah Transaksi</h3>
+          </div>
+          <!-- Form Transaksi -->
+          <div class="card-body">
+            <form id="transaksiForm">
+              <!-- Isi form disini -->
+              <div class="form-group">
+                <label for="no">No:</label>
+                <input type="number" class="form-control" id="no" name="no" required>
+              </div>
+              <div class="form-group">
+                <label for="noPol">No Pol:</label>
+                <input type="text" class="form-control" id="noPol" name="noPol" required>
+              </div>
+              <div class="form-group">
+                <label for="tanggal">Tanggal:</label>
+                <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+              </div>
+              <div class="form-group">
+                <label for="pelanggan">Pelanggan:</label>
+                <input type="text" class="form-control" id="pelanggan" name="pelanggan" required>
+              </div>
+              <div class="form-group">
+                <label for="keluhan">Keluhan:</label>
+                <input type="text" class="form-control" id="keluhan" name="keluhan" required>
+              </div>
+              <div class="form-group">
+                <label for="kategori">Kategori:</label>
+                <input type="text" class="form-control" id="kategori" name="kategori" required>
+              </div>
+              <div class="form-group row">
+                <label for="layanan" class="col-4 col-form-label">Layanan</label> 
+                <div class="col-8">
+                  <select id="layanan" name="layanan" class="custom-select">
+                    <option value="Service Besar">Service Besar</option>
+                    <option value="Service Ringan">Service Ringan</option>
+                    <option value="Body Repair">Body Repair</option>
+                  </select>
+                </div>
+              </div> 
+              <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>&copy; Develop by Kelompok 5 STT NF @2024.</strong>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+  var nomorTransaksi = 1; // inisialisasi nomor transaksi
+
+  // Fungsi untuk membuka form
+  function bukaForm() {
+    // Sembunyikan tombol "Tambah", tampilkan tombol "Submit", dan munculkan form
+    $("#formCard").show();
+    $(".btnTambah").hide();
+  }
+
+  // Fungsi untuk menambah transaksi setelah submit form
+  function submitForm() {
+    // Ambil nilai dari form
+    var noPol = $("#noPol").val();
+    var tanggal = $("#tanggal").val();
+    var pelanggan = $("#pelanggan").val();
+    var keluhan = $("#keluhan").val();
+    var kategori = $("#kategori").val();
+    var layanan = $("#layanan").val();
+
+    // Validasi form
+    if (!noPol || !tanggal || !pelanggan || !keluhan || !kategori || !layanan) {
+      alert("Semua field harus diisi!");
+      return;
+    }
+
+    // Tambah data transaksi ke tabel
+    var newRow = $("<tr>");
+    newRow.append("<td>" + nomorTransaksi + "</td>");
+    nomorTransaksi++; // Tingkatkan nomor transaksi untuk entri berikutnya 
+    newRow.append("<td>" + noPol + "</td>");
+    newRow.append("<td>" + tanggal + "</td>");
+    newRow.append("<td>" + pelanggan + "</td>");
+    newRow.append("<td>" + keluhan + "</td>");
+    newRow.append("<td>" + kategori + "</td>");
+    newRow.append("<td>" + layanan + "</td>");
+    newRow.append("<td><button type='button' onclick='editTransaksi(this)' class='btn btn-warning'>Edit</button> <button type='button' onclick='hapusTransaksi(this)' class='btn btn-danger'>Hapus</button> <button type='button' onclick='detailTransaksi(this)' class='btn btn-info'>Detail</button></td>");
+
+    // Tambahkan baris baru ke tabel
+    $("#transaksiTable tbody").append(newRow);
+
+    // Reset form setelah tambah
+    $("#transaksiForm")[0].reset();
+
+    // Sembunyikan form dan tampilkan tombol "Tambah"
+    $("#formCard").hide();
+    $(".btnTambah").show();
+  }
+
+  // Fungsi untuk mengedit transaksi
+  function editTransaksi(button) {
+  var currentRow = $(button).closest("tr");
+  var noPol = currentRow.find("td:eq(1)").text();
+  var tanggal = currentRow.find("td:eq(2)").text();
+  var pelanggan = currentRow.find("td:eq(2)").text();
+  var keluhan = currentRow.find("td:eq(3)").text();
+  var kategori = currentRow.find("td:eq(4)").text();
+  var layanan = currentRow.find("td:eq(5)").text();
+
+  // Set nilai form sesuai dengan data transaksi yang dipilih
+  $("#noPol").val(noPol);
+  $("#tanggal").val(tanggal);
+  $("#pelanggan").val(pelanggan);
+  $("#keluhan").val(keluhan);
+  $("#kategori").val(kategori);
+  $("#layanan").val(layanan);
+
+  // Tampilkan form dan sembunyikan tombol "Tambah"
+  $("#formCard").show();
+  $(".btnTambah").hide();
+ }
+
+  // Fungsi untuk menghapus transaksi
+  function hapusTransaksi(button) {
+    var currentRow = $(button).closest("tr");
+    currentRow.remove();
+    alert("Transaksi berhasil dihapus");
+  }
+
+  // Fungsi untuk melihat detail transaksi
+  function detailTransaksi(button) {
+    var currentRow = $(button).closest("tr");
+    var noPol = currentRow.find("td:eq(1)").text();
+    var tanggal = currentRow.find("td:eq(2)").text();
+    var pelanggan = currentRow.find("td:eq(3)").text();
+    var keluhan = currentRow.find("td:eq(4)").text();
+    var kategori = currentRow.find("td:eq(5)").text();
+    var layanan = currentRow.find("td:eq(6)").text();
+
+    // Implementasikan logika tampilan detail sesuai kebutuhan
+    alert("Detail Transaksi:\nNo Pol: " + noPol + "\nTanggal: " + tanggal + "\nPelanggan: " + pelanggan + "\nKeluhan: " + keluhan + "\nKategori: " + kategori + "\nLayanan: " + layanan);
+  }
+
+  // logout
+  document.getElementById("logout").addEventListener("click", function () {
+        swal
+          .fire({
+            title: "Anda Yakin Ingin Keluar?",
+            text: "",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya. Keluar!",
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "home.html";
+            }
+          });
+      });
+</script>
+</body>
+</html>

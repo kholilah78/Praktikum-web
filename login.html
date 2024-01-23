@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Log in | Bengkel Bersama</title>
+
+    <link
+      rel="shortcut icon"
+      href="dist/img/alert-icon-1562-Windows.ico"
+      type="image/x-icon"
+    />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <!-- icheck bootstrap -->
+    <link
+      rel="stylesheet"
+      href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+    <!-- icon -->
+    <link rel="Icon" href="assets/images/logo1.png" />
+  </head>
+
+  <body class="hold-transition login-page">
+    <!-- Preloader -->
+    <div
+      class="preloader flex-column justify-content-center align-items-center"
+    >
+      <img
+        class="animation__shake"
+        src="assets/images/logo1.png"
+        alt="AdminLTELogo"
+        height="60"
+        width="60"
+      />
+    </div>
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h3>Login Bengkel Bersama</h3>
+      </div>
+    </div>
+    <div class="login-box">
+      <div class="card">
+        <div class="card-body login-card-body">
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-9">
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  id="email"
+                />
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  id="pw"
+                />
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                onclick="login()"
+              >
+                Sign In
+              </button>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+              <p class="mt-2">
+                <a href="register.html" class="text-center">Register User</a>
+              </p>
+            </div>
+            <!-- /.col -->
+          </div>
+        </div>
+      </div>
+      <script>
+        function login() {
+          var email = document.getElementById("email").value;
+          var pw = document.getElementById("pw").value;
+          if (email == "" || pw == "") {
+            Swal.fire({
+              icon: "error",
+              title: "Please fill in the form!",
+            });
+          } else {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Login Success",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            setTimeout(myUrl, 1500);
+          }
+        }
+        function myUrl() {
+          document.location.href = "home2.html";
+        }
+      </script>
+      <!-- jQuery -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="plugins/jquery/jquery.min.js"></script>
+      <!-- Bootstrap 4 -->
+      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/adminlte.min.js"></script>
+    </div>
+  </body>
+</html>
